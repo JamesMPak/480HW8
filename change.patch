@@ -1,0 +1,18 @@
+# HG changeset patch
+# User James Pak <jimmypak@uw.edu>
+# Date 1369880993 25200
+# Node ID c799066e78d6f17e04c88d1fd695a620f4694624
+# Parent  1077314f416653b28e199c382667a1f11e444bdd
+Add patch
+
+diff --git a/sage/games/sudoku.py b/sage/games/sudoku.py
+--- a/sage/games/sudoku.py
++++ b/sage/games/sudoku.py
+@@ -80,6 +80,7 @@
+     if not(isinstance(m, Matrix)):
+         raise ValueError('sudoku function expects puzzle to be a matrix, perhaps use the Sudoku class')
+     solution = Sudoku(m).solve(algorithm='dlx').next()
++    print("Math 480 HW")
+     return (solution.to_matrix() if solution else None)
+ 
+ 
